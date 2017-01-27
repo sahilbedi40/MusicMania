@@ -1,0 +1,40 @@
+<ion-header >
+  <ion-navbar color="customClr">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Player</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+<ion-list>
+  <ion-item  *ngFor="let item of items" (click)="PlaySelectedSong(item)">
+  <ion-avatar  item-left>
+      <img src="assets/icon/music2.jpg">
+    </ion-avatar>
+    <ion-title>
+        {{item.title}}
+    </ion-title>
+  </ion-item>
+</ion-list>
+
+</ion-content>
+
+<ion-footer class="ion-footer" [hidden]="isHidden">
+  <ion-item color="customClr" >
+    <ion-avatar item-left>
+      <img src="assets/icon/headphone.jpg">
+    </ion-avatar>
+    <ion-title>
+       <marquee> {{selectedTitle}} </marquee>
+    </ion-title>
+    <div class="center">
+    <ion-icon name="play" (click)="PlaySong(SelectedPath)" class="iconSize"></ion-icon>
+    <ion-icon name="pause" (click)="PauseSong()" class="iconSize"></ion-icon>
+    <ion-icon name="square" (click)="StopSong()" class="iconSize"></ion-icon>
+    </div>
+  </ion-item>   
+</ion-footer>
