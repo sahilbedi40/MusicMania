@@ -1,0 +1,508 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js" type="text/javascript" ></script>
+
+    <style type="text/css">
+
+        .dashboardTable{
+            margin-left: 200px;
+        }
+
+        .dashboardTable td {
+            padding: 8px 5px 8px 6px;
+            border-top: solid 1px #e5e5e5;
+            border-bottom: solid 1px #e5e5e5;
+            vertical-align: middle;
+            border-right: solid 1px #e5e5e5;
+            margin: 0;
+            border-left: solid 1px #e5e5e5;
+        }
+
+            .dashboardTable thead tr td {
+                background-color: #7a7a7a;
+                color: #fff;
+            }
+
+        .categoryNameText {
+            /*float: right;*/
+            transform: rotate(-90deg);
+            font-weight: bold;
+            text-align: center;
+            font-size: 12px;
+            word-wrap: break-word;
+            height:100%;
+        }
+
+        .tdWidth200{
+          width:200px;
+        }
+
+        .tdWidth350{
+          width:350px;
+        }
+
+        .tdWidth270{
+          width:270px;
+        }
+
+
+        .tdWidth50{
+            width:50px;
+        }
+        .tdWidth100{
+            width:100px;
+        }
+
+        div.Mytable td {
+            width: 32px;
+            height: 41px;
+        }
+
+        div.Mytable ul li{
+            list-style:none;
+        }
+        .divWidth49{
+            width:49%;
+            float:left;
+        }
+
+        .divWidth36{
+            width:36%;
+            float:left;
+        }
+
+        .divBorder{
+            border: 1px solid;
+            margin-bottom: 2px;
+            width: 178px;
+            height:39px;
+        }
+
+        .divMarginBottom{
+            margin-bottom: 4px;
+            margin-left: 2px;
+        }
+
+        .divInnerWidth{
+            width:285px;
+            float:left;
+        }
+
+    </style>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".categoryNameText").each(function () {
+                $(this).width($(this).parent().next().height());
+                $(this).parent().height($(this).parent().next().height());
+            });
+        });
+    </script>
+
+</head>
+<body style="margin-top:20px;">
+
+    <!--<table class="dashboardTable">
+        <thead>
+            <tr>
+                <td class="tdWidth200">Policy Metric</td>
+                <td class="tdWidth50"></td>
+                <td>AUS</td>
+                <td>BEL</td>
+                <td>BRA</td>
+                <td>CAN</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>          
+                <td rowspan="2" class="tdWidth200">
+                    <div class="categoryNameText">Retirement and Long Service benefits</div>
+                </td>
+                <td class="tdWidth100">Emphasis on individual responsibility</td>
+                <td class="tdWidth50"></td>
+                <td class="tdWidth50"></td>
+                <td class="tdWidth50"></td>
+                <td class="tdWidth50"></td>
+            </tr>
+            <tr>
+                <td class="tdWidth100">Market competitiveness</td>
+                <td class="tdWidth50"></td>
+                <td class="tdWidth50"></td>
+                <td class="tdWidth50"></td>
+                <td class="tdWidth50"></td>
+            </tr>
+
+            <tr>
+            
+                <td rowspan="4" class="tdWidth200">
+                    <div class="categoryNameText">Health and Risk Benefits</div>
+                </td>
+                <td class="tdWidth100">Administration cost DB (per member)</td>
+                <td class="tdWidth50"></td>
+                <td class="tdWidth50"></td>
+                <td class="tdWidth50"></td>
+                <td class="tdWidth50"></td>
+            </tr>
+            <tr>
+                <td class="tdWidth100">Administration cost DC (per member)</td>
+                <td class="tdWidth50"></td>
+                <td class="tdWidth50"></td>
+                <td class="tdWidth50"></td>
+                <td class="tdWidth50"></td>
+            </tr>
+            <tr>
+                <td class="tdWidth100">Compliance</td>
+                <td class="tdWidth50"></td>
+                <td class="tdWidth50"></td>
+                <td class="tdWidth50"></td>
+                <td class="tdWidth50"></td>
+            </tr>
+            <tr>
+                <td class="tdWidth100">Effectiveness of the fiduciary board</td>
+                <td class="tdWidth50"></td>
+                <td class="tdWidth50"></td>
+                <td class="tdWidth50"></td>
+                <td class="tdWidth50"></td>
+            </tr>
+        </tbody>
+    </table>-->
+
+
+    <br/>
+    <br/>
+
+    <!--<table class="dashboardTable">
+        <thead>
+            <tr>
+                <td class="tdWidth200">Policy Metric</td>
+                <td class="tdWidth50"></td>
+                <td>AUS</td>
+                <td>BEL</td>
+                <td>BRA</td>
+                <td>CAN</td>
+            </tr>
+        </thead>
+       <tbody>
+           <tr>
+               <td class="tdWidth200">
+                   <div class="categoryNameText">Retirement and Long Service benefits</div>
+               </td>
+               <td colspan="5">
+                   <table>
+                       <tbody>
+                           <tr>
+                               <td class="tdWidth50">Emphasis on individual responsibility</td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                           </tr>
+                           <tr>
+                               <td class="tdWidth50">Emphasis on individual responsibility</td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                           </tr>                           
+                          
+                       </tbody>
+                   </table>
+               </td>
+           </tr>
+           <tr>
+               <td class="tdWidth200">
+                   <div class="categoryNameText">Retirement and Long Service benefits</div>
+               </td>
+               <td colspan="5">
+                   <table>
+                       <tbody>
+                           <tr>
+                               <td class="tdWidth50">Emphasis on individual responsibility</td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                           </tr>
+                           <tr>
+                               <td class="tdWidth50">Emphasis on individual responsibility</td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                           </tr>
+                           <tr>
+                               <td class="tdWidth50">Emphasis on individual responsibility</td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                           </tr>
+                           <tr>
+                               <td class="tdWidth50">Emphasis on individual responsibility</td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                           </tr>
+                       </tbody>
+                   </table>
+               </td>
+           </tr>
+       </tbody>
+    </table>-->
+
+    <br/>
+    <br/>
+
+
+    <div>
+        <table class="dashboardTable">
+            <thead>
+                <tr>
+                    <td class="tdWidth270">Policy Metric</td>                    
+                    <td>AUS</td>
+                    <td>BEL</td>
+                    <td>BRA</td>
+                    <td>CAN</td>
+                </tr>
+            </thead>
+        </table>
+</div>
+
+    <div class="dashboardTable Mytable" style="margin-bottom:200px;">
+        <div class="divMarginBottom">
+            <div class="divInnerWidth">
+                <div class="divWidth36">
+                    <div class="categoryNameText">Retirement and Long Service benefits</div>
+                </div>
+                <div class="divWidth36">
+                    <div class="divBorder">Emphasis on individual responsibility</div>
+                    <div class="divBorder">Effectiveness of the fiduciary board</div>
+                </div>
+            </div>
+            <div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="divMarginBottom">
+            <div class="divInnerWidth">
+                <div class="divWidth36">
+                    <div class="categoryNameText">Retirement and Long Service benefits</div>
+                </div>
+                <div class="divWidth36">
+                    <div class="divBorder">Emphasis on individual responsibility</div>
+                    <div class="divBorder">Effectiveness of the fiduciary board</div>
+                    <div class="divBorder">Market competitiveness</div>
+                    <div class="divBorder">Administration cost DC (per member)</div>
+                </div>
+            </div>
+            <div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="divMarginBottom">
+            <div class="divInnerWidth">
+                <div class="divWidth36">
+                    <div class="categoryNameText">Retirement and Long Service benefits</div>
+                </div>
+                <div class="divWidth36">
+                    <div class="divBorder">Emphasis on individual responsibility</div>
+                    <div class="divBorder">Effectiveness of the fiduciary board</div>
+                    <div class="divBorder">Administration cost DC (per member)</div>
+                    <div class="divBorder">Emphasis on individual responsibility</div>
+                    <div class="divBorder">Effectiveness of the fiduciary board</div>
+                    <div class="divBorder">Administration cost DC (per member)</div>
+                </div>
+            </div>
+            <div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="divMarginBottom">
+            <div class="divInnerWidth">
+                <div class="divWidth36">
+                    <div class="categoryNameText">Retirement and Long Service benefits</div>
+                </div>
+                <div class="divWidth36">
+                    <div class="divBorder">Emphasis on individual responsibility</div>
+                    <div class="divBorder">Effectiveness of the fiduciary board</div>
+                    <div class="divBorder">Administration cost DC (per member)</div>
+                    <div class="divBorder">Effectiveness of the fiduciary board</div>
+                    <div class="divBorder">Administration cost DC (per member)</div>
+                </div>
+            </div>
+            <div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!--<table class="dashboardTable">
+        <thead>
+            <tr>
+                <td class="tdWidth200">Policy Metric</td>
+                <td class="tdWidth50"></td>
+                <td>AUS</td>
+                <td>BEL</td>
+                <td>BRA</td>
+                <td>CAN</td>
+            </tr>
+        </thead>
+        <tbody>
+           <tr>
+               <td>
+                   <table>
+                       <tbody>
+                           <tr>
+                               <td>
+                                   Retirement and Long Service benefits
+                               </td>
+                           </tr>
+                       </tbody>
+                   </table>
+               </td>
+               <td>
+                   Emphasis on individual responsibility
+               </td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+           </tr>
+            <tr>
+                <td>
+                    
+                </td>
+                <td>
+                    Market competitiveness
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>-->
+
+
+</body>
+</html>
